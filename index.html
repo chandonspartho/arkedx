@@ -28,24 +28,9 @@
 
     <div class="game-card">
       <div class="game-title">Stellar Crash</div>
-      <div class="game-desc">Consume stars. Evolve. Collapse. Rebirth. An infinite arcade-roguelite with no true win — only escalation.</div>
-      <div class="game-tag">arcade · roguelite · infinite</div>
-      <div class="game-status">in development</div>
-    </div>
-
-    <div class="game-card locked">
-      <div class="game-title">???</div>
-      <div class="game-desc">Coming soon.</div>
-      <div class="game-tag">unrevealed</div>
-      <div class="game-status">locked</div>
-    </div>
-
-    <div class="game-card locked">
-      <div class="game-title">???</div>
-      <div class="game-desc">Coming soon.</div>
-      <div class="game-tag">unrevealed</div>
-      <div class="game-status">locked</div>
-    </div>
+      <div class="game-desc">Consume. Evolve. Collapse. Rebirth.</div>
+       <div class="game-tag">coming soon</div>
+  
 
   </div>
 </section>
@@ -54,6 +39,23 @@
   <footer>
     <p>made by Chandon &nbsp;·&nbsp; chandons.partho@gmail.com</p>
   </footer>
+<!-- Chatbot -->
+<div id="chat-icon" onclick="toggleChat()">💬</div>
 
+<div id="chat-window">
+  <div id="chat-header">
+    <span>ArkEdx Assistant</span>
+    <span onclick="toggleChat()" id="chat-close">✕</span>
+  </div>
+  <div id="chat-messages">
+    <div class="bot-msg">Hey 👾 Ask me anything about ArkEdx or the games.</div>
+  </div>
+  <div id="chat-input-row">
+    <input type="text" id="chat-input" placeholder="type something..."/>
+    <button onclick="sendMsg()">→</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
