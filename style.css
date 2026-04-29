@@ -253,3 +253,18 @@ footer {
   border-color: #222;
 }
 #chat-input-row button:hover { color: #fff; }
+/* ── ABOUT ── */
+#about {
+  padding: 100px 48px;
+  border-top: 1px solid #1e1e1e;
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+#about p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.9;
+  letter-spacing: 2px;
+}
