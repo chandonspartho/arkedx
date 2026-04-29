@@ -182,5 +182,74 @@ footer {
   font-size: 18px;
   transition: color 0.2s;
 }
+/* ── GAMES SECTION ── */
+.games-label {
+  text-align: center;
+  font-size: 11px;
+  letter-spacing: 6px;
+  color: #333;
+  margin-bottom: 48px;
+}
 
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.game-card {
+  background: #111;
+  border: 1px solid #1e1e1e;
+  padding: 40px 36px;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.game-card:hover {
+  background: #161616;
+  border-color: #333;
+}
+
+.game-card.locked {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.game-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 12px;
+  letter-spacing: 1px;
+}
+
+.game-desc {
+  font-size: 13px;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+.game-tag {
+  font-size: 10px;
+  letter-spacing: 3px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.game-status {
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #c97b3a;
+  border: 1px solid #c97b3a33;
+  display: inline-block;
+  padding: 4px 12px;
+}
+
+.game-card.locked .game-status {
+  color: #333;
+  border-color: #222;
+}
 #chat-input-row button:hover { color: #fff; }
