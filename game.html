@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Stellar Crash</title>
+  <style>
+    body {
+      margin: 0;
+      background: #0a0a0a;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    canvas {
+      border: 1px solid #222;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="gameCanvas" width="600" height="600"></canvas>
+
+  <script>
+   const canvas = document.getElementById('gameCanvas');
+const ctx = canvas.getContext('2d');
+
+// Player object
+const player = {
+  x: 300,
+  y: 300,
+  radius: 11,
+  speed: 8
+};
+// Star
+const star = {
+  x: Math.random() * 560 + 20,
+  y: Math.random() * 560 + 20,
+  radius: 10
+};
+
+let score = 0;
+
+// Track which keys are pressed
+const keys = {};
+document.addEventListener('keydown', e => keys[e.key] = true);
+document.addEventListener('keyup', e => keys[e.key] = false);
+
+// Game loop
+function gameLoop() {
+  // Clear the canvas
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  // Move player based on keys
+  if (keys['ArrowUp'])    player.y -= player.speed;
+  if (keys['ArrowDown'])  player.y += player.speed;
+  if (keys['ArrowLeft'])  player.x -= player.speed;
+  if (keys['ArrowRight']) player.x += player.speed;
+
+  // Draw player
+  ctx.beginPath();
+  ctx.arc(player.x, player.y, player.radius, 0, Math.PI * 2);
+  ctx.fillStyle = '#ffffff';
+  ctx.fill();
+
+  // Call gameLoop again next frame
+  requestAnimationFrame(gameLoop);
+ // Draw star
+ ctx.beginPath();
+ ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
+ ctx.fillStyle = '#FFD700';
+ ctx.fill();
+
+ // Check if player touches star
+ const dx = player.x - star.x;
+ const dy = player.y - star.y;
+ const distance = Math.sqrt(dx * dx + dy * dy);
+
+ if (distance < player.radius + star.radius) {
+  score++;
+  star.x = Math.random() * 560 + 20;
+  star.y = Math.random() * 560 + 20;
+ }
+
+ // Draw score
+ ctx.fillStyle = '#ffffff';
+ ctx.font = '16px Courier New';
+ ctx.fillText('score: ' + score, 16, 24);
+}
+
+gameLoop();
+  </script>
+</body>
+</html>
