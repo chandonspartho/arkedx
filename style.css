@@ -268,3 +268,8 @@ footer {
   line-height: 1.9;
   letter-spacing: 2px;
 }
+a.game-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
