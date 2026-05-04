@@ -7,7 +7,7 @@
 body {
   background: #0a0a0a;
   color: #e8e8e8;
-  font-family: 'Courier New', monospace;
+  font-family: 'Inter', sans-serif;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -27,6 +27,7 @@ header {
   font-weight: bold;
   letter-spacing: 2px;
   color: #ffffff;
+  font-family: 'Courier New', monospace;
 }
 
 nav {
@@ -35,11 +36,12 @@ nav {
 }
 
 nav a {
-  color: #555;
+  color: #666;
   text-decoration: none;
   font-size: 13px;
   letter-spacing: 2px;
   transition: color 0.2s;
+  font-family: 'Courier New', monospace;
 }
 
 nav a:hover {
@@ -63,11 +65,12 @@ nav a:hover {
   color: #ffffff;
   line-height: 1;
   margin-bottom: 20px;
+  font-family: 'Courier New', monospace;
 }
 
 #hero p {
   font-size: 14px;
-  color: #444;
+  color: #666;
   letter-spacing: 4px;
   text-transform: lowercase;
 }
@@ -84,9 +87,11 @@ footer {
   border-top: 1px solid #1e1e1e;
   text-align: center;
   font-size: 12px;
-  color: #333;
+  color: #444;
   letter-spacing: 2px;
+  font-family: 'Courier New', monospace;
 }
+
 /* ── CHAT ── */
 #chat-icon {
   position: fixed;
@@ -127,7 +132,8 @@ footer {
   justify-content: space-between;
   font-size: 12px;
   letter-spacing: 2px;
-  color: #555;
+  color: #666;
+  font-family: 'Courier New', monospace;
 }
 
 #chat-close { cursor: pointer; }
@@ -144,7 +150,7 @@ footer {
 
 .bot-msg {
   font-size: 13px;
-  color: #888;
+  color: #aaa;
   line-height: 1.6;
 }
 
@@ -170,32 +176,36 @@ footer {
   outline: none;
 }
 
-#chat-input::placeholder { color: #333; }
+#chat-input::placeholder { color: #444; }
 
 #chat-input-row button {
   background: transparent;
   border: none;
   border-left: 1px solid #1e1e1e;
-  color: #555;
+  color: #666;
   padding: 0 20px;
   cursor: pointer;
   font-size: 18px;
   transition: color 0.2s;
 }
+
+#chat-input-row button:hover { color: #fff; }
+
 /* ── GAMES SECTION ── */
 .games-label {
   text-align: center;
   font-size: 11px;
   letter-spacing: 6px;
-  color: #333;
+  color: #444;
   margin-bottom: 48px;
+  font-family: 'Courier New', monospace;
 }
 
 .games-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: 1fr;
+  max-width: 800px;
   gap: 2px;
-  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -219,15 +229,16 @@ footer {
 
 .game-title {
   font-size: 20px;
-  font-weight: bold;
+  font-weight: 600;
   color: #ffffff;
   margin-bottom: 12px;
   letter-spacing: 1px;
+  font-family: 'Courier New', monospace;
 }
 
 .game-desc {
-  font-size: 13px;
-  color: #555;
+  font-size: 14px;
+  color: #888;
   line-height: 1.7;
   margin-bottom: 24px;
 }
@@ -235,8 +246,9 @@ footer {
 .game-tag {
   font-size: 10px;
   letter-spacing: 3px;
-  color: #333;
+  color: #666;
   margin-bottom: 20px;
+  font-family: 'Courier New', monospace;
 }
 
 .game-status {
@@ -246,13 +258,14 @@ footer {
   border: 1px solid #c97b3a33;
   display: inline-block;
   padding: 4px 12px;
+  font-family: 'Courier New', monospace;
 }
 
 .game-card.locked .game-status {
-  color: #333;
+  color: #444;
   border-color: #222;
 }
-#chat-input-row button:hover { color: #fff; }
+
 /* ── ABOUT ── */
 #about {
   padding: 100px 48px;
@@ -263,11 +276,12 @@ footer {
 }
 
 #about p {
-  font-size: 14px;
-  color: #555;
-  line-height: 1.9;
-  letter-spacing: 2px;
+  font-size: 17px;
+  color: #aaaaaa;
+  line-height: 2;
+  letter-spacing: 1px;
 }
+
 a.game-card {
   display: block;
   text-decoration: none;
